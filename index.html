@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<style type="text/css">
+		body{}
+		.container{
+			position: relative;
+			top: 100px;
+			width: 1280px;
+			height: 420px;
+			transform-style: preserve-3d;
+			transform: rotateX(-5deg);
+			-webkit-perspective:800px;
+		}
+		img{
+			position: absolute;
+			width: 640px;
+			height: 360px;
+			box-sizing: border-box;
+			border: 3px groove gold;
+			top: 10px;
+			transition: all 1s;
+		}
+		.btn{
+			position: absolute;
+			width: 1280px;
+			height: 30px;
+			bottom: 10px;
+			left: 0;
+			display: flex;
+			justify-content: space-around;
+		}
+		.btn div{
+			width: 150px;
+			height: 30px;
+			border-radius: 50%;
+			background: deepskyblue;
+			color: white;
+			text-align: center;
+			line-height: 30px;
+		}
+		.img0{
+			left: -320px;
+			transform: translateZ(-640px);
+		}
+		.img1{
+			left: 0px;
+			transform: translateZ(-320px);
+		}
+		.img2{
+			left: 320px;
+		}
+		.img3{
+			left: 640px;
+			transform: translateZ(-320px);
+		}
+		.img4{
+			left: 960px;
+			transform: translateZ(-640px);
+		}
+		.img5{
+			left: 320px;
+			transform: translateZ(-650px);
+		}
+		.img6{
+			left: 320px;
+			transform: translateZ(-660px);
+		}
+		.img7{
+			left: 320px;
+			transform: translateZ(-670px);
+		}
+		.img8{
+			left: 320px;
+			transform: translateZ(-680px);
+		}
+		.img9{
+			left: 320px;
+			transform: translateZ(-690px);
+		}
+		.img10{
+			left: 320px;
+			transform: translateZ(-700px);
+		}
+		.img11{
+			left: 320px;
+			transform: translateZ(-710px);
+		}
+		.img12{
+			left: 320px;
+			transform: translateZ(-720px);
+		}
+	</style>
+	<body>
+		<div class="container">
+			<img class="img0" src="img/3.jpg" alt="">
+			<img class="img1" src="img/2.jpg" alt="">
+			<img class="img2" src="img/1.jpg" alt="">
+			<img class="img3" src="img/4.jpg" alt="">
+			<img class="img4" src="img/5.jpg" alt="">
+			<img src="img/6.jpg"/>
+			<img src="img/7.jpg"/>
+			<img src="img/8.jpg"/>
+			<img src="img/9.jpg"/>
+			<img src="img/10.jpg"/>
+			<img src="img/11.jpg"/>
+			<img src="img/12.jpg"/>
+			<div class="btn">
+				<div>
+					prev
+				</div>
+				<div>
+					next
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn = document.querySelectorAll(".btn div");
+		var img = document.querySelectorAll(".container img");
+		var a = 0;
+		for(var i = 0;i < img.length; i ++){
+			var b = (a ++) % 12;
+			img[i].className = "img" + b;
+		}
+		btn[0].onclick = function(){
+			a ++;
+			for(var i = 0;i < img.length; i ++){
+				var b = (a ++) % 12;
+				img[i].className = "img" +b;
+				
+			}
+		}
+		btn[1].onclick = function(){
+			a --;
+			for(var i = 0;i < img.length; i ++){
+				var b = (a ++) % 12;
+				img[i].className = "img" + b;
+//				console.log("img" + b)
+			}
+		}
+	</script>
+</html>
