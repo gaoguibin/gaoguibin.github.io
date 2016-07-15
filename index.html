@@ -2,18 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>3d旋转木马</title>
 	</head>
 	<style type="text/css">
-		body{}
+		body{margin:0;padding:0;background:#fff;}
+		img{border:0;}
 		.container{
 			position: relative;
-			top: 100px;
+			margin: 100px auto;
 			width: 1280px;
 			height: 420px;
+			-webkit-transform-style: preserve-3d;
 			transform-style: preserve-3d;
+			-webkit-transform: rotateX(-5deg);
 			transform: rotateX(-5deg);
 			-webkit-perspective:800px;
+			perspective:800px;
 		}
 		img{
 			position: absolute;
@@ -30,7 +34,9 @@
 			height: 30px;
 			bottom: 10px;
 			left: 0;
+			-webkit-display: flex;
 			display: flex;
+			-webkit-justify-content: space-around;
 			justify-content: space-around;
 		}
 		.btn div{
@@ -44,10 +50,12 @@
 		}
 		.img0{
 			left: -320px;
+			-webkit-transform: translateZ(-640px);
 			transform: translateZ(-640px);
 		}
 		.img1{
 			left: 0px;
+			-webkit-transform: translateZ(-320px);
 			transform: translateZ(-320px);
 		}
 		.img2{
@@ -55,42 +63,52 @@
 		}
 		.img3{
 			left: 640px;
+			-webkit-transform: translateZ(-320px);
 			transform: translateZ(-320px);
 		}
 		.img4{
 			left: 960px;
+			-webkit-transform: translateZ(-640px);
 			transform: translateZ(-640px);
 		}
 		.img5{
 			left: 320px;
+			-webkit-transform: translateZ(-650px);
 			transform: translateZ(-650px);
 		}
 		.img6{
 			left: 320px;
+			-webkit-transform: translateZ(-660px);
 			transform: translateZ(-660px);
 		}
 		.img7{
 			left: 320px;
+			-webkit-transform: translateZ(-670px);
 			transform: translateZ(-670px);
 		}
 		.img8{
 			left: 320px;
+			-webkit-transform: translateZ(-680px);
 			transform: translateZ(-680px);
 		}
 		.img9{
 			left: 320px;
+			-webkit-transform: translateZ(-690px);
 			transform: translateZ(-690px);
 		}
 		.img10{
 			left: 320px;
+			-webkit-transform: translateZ(-700px);
 			transform: translateZ(-700px);
 		}
 		.img11{
 			left: 320px;
+			-webkit-transform: translateZ(-710px);
 			transform: translateZ(-710px);
 		}
 		.img12{
 			left: 320px;
+			-webkit-transform: translateZ(-720px);
 			transform: translateZ(-720px);
 		}
 	</style>
@@ -144,3 +162,4 @@
 		}
 	</script>
 </html>
+
