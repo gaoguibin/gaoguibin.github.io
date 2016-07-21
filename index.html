@@ -1,165 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8">
-		<title>3d旋转木马</title>
+		<title></title>
 	</head>
 	<style type="text/css">
-		body{margin:0;padding:0;background:#fff;}
-		img{border:0;}
-		.container{
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #ccc;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.wrap{
+			width: 1080px;
+			margin: 0 auto;
+		}
+		ul{
+			display: block;
+			padding: 10px;
+			float: left;
+			background: #ccc;
+		}
+		li{
 			position: relative;
-			margin: 100px auto;
-			width: 1280px;
-			height: 420px;
-			-webkit-transform-style: preserve-3d;
-			transform-style: preserve-3d;
-			-webkit-transform: rotateX(-5deg);
-			transform: rotateX(-5deg);
-			-webkit-perspective:800px;
-			perspective:800px;
+			margin: 10px 0;
+			width: 250px;
 		}
-		img{
+		li div{
 			position: absolute;
-			width: 640px;
-			height: 360px;
-			box-sizing: border-box;
-			border: 3px groove gold;
-			top: 10px;
-			transition: all 1s;
-		}
-		.btn{
-			position: absolute;
-			width: 1280px;
-			height: 30px;
-			bottom: 10px;
+			top: 0;
 			left: 0;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-justify-content: space-around;
-			justify-content: space-around;
+			width: 100%;
+			height: 100%;
+			background: deeppink;
+			opacity: 0.6;
+			display: none;
 		}
-		.btn div{
-			width: 150px;
-			height: 30px;
-			border-radius: 50%;
-			background: deepskyblue;
-			color: white;
-			text-align: center;
-			line-height: 30px;
+		li img{
+			width: 100%;
 		}
-		.img0{
-			left: -320px;
-			-webkit-transform: translateZ(-640px);
-			transform: translateZ(-640px);
+		.rCover{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.7);
+			display: none;
+			cursor: pointer;
 		}
-		.img1{
-			left: 0px;
-			-webkit-transform: translateZ(-320px);
-			transform: translateZ(-320px);
-		}
-		.img2{
-			left: 320px;
-		}
-		.img3{
-			left: 640px;
-			-webkit-transform: translateZ(-320px);
-			transform: translateZ(-320px);
-		}
-		.img4{
-			left: 960px;
-			-webkit-transform: translateZ(-640px);
-			transform: translateZ(-640px);
-		}
-		.img5{
-			left: 320px;
-			-webkit-transform: translateZ(-650px);
-			transform: translateZ(-650px);
-		}
-		.img6{
-			left: 320px;
-			-webkit-transform: translateZ(-660px);
-			transform: translateZ(-660px);
-		}
-		.img7{
-			left: 320px;
-			-webkit-transform: translateZ(-670px);
-			transform: translateZ(-670px);
-		}
-		.img8{
-			left: 320px;
-			-webkit-transform: translateZ(-680px);
-			transform: translateZ(-680px);
-		}
-		.img9{
-			left: 320px;
-			-webkit-transform: translateZ(-690px);
-			transform: translateZ(-690px);
-		}
-		.img10{
-			left: 320px;
-			-webkit-transform: translateZ(-700px);
-			transform: translateZ(-700px);
-		}
-		.img11{
-			left: 320px;
-			-webkit-transform: translateZ(-710px);
-			transform: translateZ(-710px);
-		}
-		.img12{
-			left: 320px;
-			-webkit-transform: translateZ(-720px);
-			transform: translateZ(-720px);
+		.rCover img{
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			height: 70%;
 		}
 	</style>
 	<body>
-		<div class="container">
-			<img class="img0" src="img/3.jpg" alt="">
-			<img class="img1" src="img/2.jpg" alt="">
-			<img class="img2" src="img/1.jpg" alt="">
-			<img class="img3" src="img/4.jpg" alt="">
-			<img class="img4" src="img/5.jpg" alt="">
-			<img src="img/6.jpg"/>
-			<img src="img/7.jpg"/>
-			<img src="img/8.jpg"/>
-			<img src="img/9.jpg"/>
-			<img src="img/10.jpg"/>
-			<img src="img/11.jpg"/>
-			<img src="img/12.jpg"/>
-			<div class="btn">
-				<div>
-					prev
-				</div>
-				<div>
-					next
-				</div>
-			</div>
+		<div class="wrap">
+			<ul class="row1"></ul>
+			<ul class="row2"></ul>
+			<ul class="row3"></ul>
+			<ul class="row4"></ul>
+		</div>
+		<div class="rCover">
+			<img src=""/>
 		</div>
 	</body>
+	<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		var btn = document.querySelectorAll(".btn div");
-		var img = document.querySelectorAll(".container img");
-		var a = 0;
-		for(var i = 0;i < img.length; i ++){
-			var b = (a ++) % 12;
-			img[i].className = "img" + b;
+		function num(){
+			return parseInt(Math.random()*20+1)
 		}
-		btn[0].onclick = function(){
-			a ++;
-			for(var i = 0;i < img.length; i ++){
-				var b = (a ++) % 12;
-				img[i].className = "img" +b;
-				
+		var num1 = num();//随机某张图片
+		
+		createLi(20);//创建20个li
+		function createLi(a){
+			for (var i=0;i<a;i ++){
+				num1 ++;
+				if(num1>20){
+					num1 = 1;
+				}
+				var newLi = $("<li><img src='img/"+num1+".jpg'/><div></div></li>")
+				//要将li插入到高度最低的ul里面去
+				var ulHeight = [];      //存放uL高度的数组
+				//将ul的高度放到数组里面去
+				$("ul").each(function(){
+					ulHeight.push($(this).height())
+				})
+				//判断哪个ul的高度最低
+				var minHeight = ulHeight[0];
+				var minIndex = 0;
+				for(var k = 0; k < ulHeight.length; k ++){
+					if(minHeight > ulHeight[k]){
+						minHeight = ulHeight[k];
+						minIndex = k;
+					}
+				}
+				$("ul").eq(minIndex).append(newLi);
 			}
 		}
-		btn[1].onclick = function(){
-			a --;
-			for(var i = 0;i < img.length; i ++){
-				var b = (a ++) % 12;
-				img[i].className = "img" + b;
-//				console.log("img" + b)
-			}
-		}
+		
+		
+		$("li").hover(function(){
+			$(this).children().last().toggle();
+		})
+		$("li").click(function(){
+			var iSrc = $(this).children().first().attr("src");
+			$(".rCover img").attr("src",iSrc);
+			$(".rCover").show();
+			$(".rCover").click(function(){
+				$(".rCover").hide();
+			})
+		})
 	</script>
 </html>
-
