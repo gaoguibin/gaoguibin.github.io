@@ -34,8 +34,7 @@ for (var i = 0; i < srcArr.length; i ++) {
 					i = 0
 				}
 			},50)
-			$(".diqiu1").addClass("diqiu11");
-			$(".diqiu2").addClass("diqiu22");		
+					
 		}
 	}
 }

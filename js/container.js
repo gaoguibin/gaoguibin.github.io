@@ -43,6 +43,27 @@ document.addEventListener("touchend",function(){
 	btn.style.top = innerH * (index + 1) - 50 + "px";
 	point.style.top = innerH * (index + 1) - 30 + "px";
 	
+	//第一页动画
+	if(index == 0){
+		page1_show();
+	}else if(index == 1){
+		page1_hide();
+	}
+	
+	
+	
+	
+	//第二页动画
+	var diqiu1 = document.querySelector(".diqiu1");
+	var diqiu2 = document.querySelector(".diqiu2");
+	if(index == 1){
+		diqiu1.setAttribute("id","diqiu11");
+		diqiu2.setAttribute("id","diqiu22");
+	}else if(index - 1 == 1 || -1){
+		diqiu1.removeAttribute("id");
+		diqiu2.removeAttribute("id");
+	}
+	
 	//第四页动画添加删除
 	if(index == 3){
 		out();

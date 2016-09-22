@@ -327,14 +327,14 @@ html,body{width: 100%;height: 100%;}
 .star2{width: 45%;left: -50%;top: 50%;animation: star2 8s infinite ease-in;}
 .star3{width: 45%;right: -50%;top: 30%;animation: star3 8s infinite ease-in ;}
 .top1{top:0;height: 30px;width: 100%;z-index: 10;}
-.top2{top: 30px;height: 5px;width: 100%;z-index: 10;}
+.top2{top: 30px;height: 5px;width: 0;z-index: 10;}
 .top3{width: 8px;top: 15px;right: 5%;z-index: 10;}
 .top4{width: 8px;top: 15px;right: 10%;z-index: 10;}
 .top5{width: 8px;top: 15px;right: 15%;z-index: 10;}
 .point{left: 50%;transform: translateX(-50%);width: 38px;animation: point 1.2s linear infinite;z-index: 10;}
 .btn{right: 30px;width: 30px;animation: btn 2s linear infinite;z-index: 10;}
 
-.logo{width: 336px;height: 340px;position: relative;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);top: 15%;}
+.logo{width: 336px;height: 340px;position: relative;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);top: 15%;display: none;}
 .blue_bg{width: 336px;right: 0;top: 0;animation: blue_bg 1s linear;}
 .red_bg{width: 160px;left: 0;top: 0;animation: red_bg 1s linear;}
 .yellow_bg{width: 336px;bottom: 0;left: 0;animation: yellow_bg 1s linear;}
@@ -354,16 +354,16 @@ html,body{width: 100%;height: 100%;}
 .white_A{right: 126px;animation: letters2 4s linear;}
 .white_M{right: 180px;animation: letters1 4s linear;}
 
-
-.letter1{width: 50%;bottom: 22%;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);animation: letter1 5s linear;}
-.letter2{width: 70%;bottom: 15%;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);animation: letter2 5.5s linear;}
+.letter1,.letter2{display: none;}
+#letter1{display: block;width: 50%;bottom: 22%;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);animation: letter1 5s linear;}
+#letter2{display: block;width: 70%;bottom: 15%;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);animation: letter2 5.5s linear;}
 
 
 
 .diqiu1{position: absolute;width: 80%;left: 50%;transform: translateX(-50%);bottom: 22%;z-index: 10;opacity: 0;}
-.diqiu11{animation: diqiu1 3s;opacity: 1;}
+#diqiu11{animation: diqiu1 3s;opacity: 1;}
 .diqiu2{position: absolute;width: 80%;left: 50%;transform: translateX(-50%);bottom: 12%;z-index: 10;opacity: 0;}
-.diqiu22{animation: diqiu2 3s;opacity: 1;} 
+#diqiu22{animation: diqiu2 3s;opacity: 1;} 
 
 
 /*第三页*/
