@@ -99,7 +99,7 @@ html,body,.load,.swiper-container{width: 100%;height: 100%;margin: 0;padding: 0;
 .line88{position: absolute;left: 63%;top: 60%;border-left: 2px solid white;height: 54%;transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
 
 .p91,.p92,.p93{width: 100%;height: 100%;}
-
+.p9_top{position: absolute;width: 70%;height: 30%;top: 8%;left: 15%;z-index: 10%;}
 
 
 

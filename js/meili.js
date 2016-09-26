@@ -64,20 +64,20 @@ setInterval(function(){
 //第三页点击事件
 var p3 = document.querySelector(".p3");
 var p3_1 = document.querySelector(".p3_1");
-p3.onclick = function(){
+p3.ontouchstart = function(){
 	p3_1.style.display = "block";
 }
-p3_1.onclick = function(ev){
+p3_1.ontouchstart = function(ev){
 	ev.preventDefault();
 	p3_1.style.display = "none";
 }
 //第五页点击事件
 var p5 = document.querySelector(".p5");
 var p5_1 = document.querySelector(".p5_1");
-p5.onclick = function(){
+p5.ontouchstart = function(){
 	p5_1.style.display = "block";
 }
-p5_1.onclick = function(ev){
+p5_1.ontouchstart = function(ev){
 	ev.preventDefault();
 	p5_1.style.display = "none";
 }
@@ -89,11 +89,11 @@ var container = document.getElementsByClassName("container")[0];
 var btn = document.querySelector(".btn");
 var p7_left1 = document.querySelector(".p7_left1");
 var p7_left2 = document.querySelector(".p7_left2");
-p7.onclick = function(){
+p7.ontouchstart = function(){
 	p7.style.display = p7_left1.style.display = p7_left2.style.display = "none";
 	container.style.display = "block";
 }
-btn.onclick = function(){
+btn.ontouchstart = function(){
 	p7.style.display = p7_left1.style.display = p7_left2.style.display = "block";
 	container.style.display = "none";
 }
