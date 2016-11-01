@@ -1,0 +1,110 @@
+html,body,.load,.swiper-container{width: 100%;height: 100%;margin: 0;padding: 0;}
+.load{position: absolute;z-index: 10;background: deepskyblue;}
+.loading{width: 75%;height: 30%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}
+.loading p{text-align: center;font-size: 50px;}
+.bord{box-sizing: border-box;width: 100%;height: 10%;border: 3px solid cyan;border-radius: 30px;overflow: hidden;}
+.inner{width: 0%;height: 100%;background: red;}
+.swiper-slide{position: relative;overflow: hidden;background: red;}
+.swiper-slide img{position: absolute;}
+.bg{width: 100%;height: 100%;top: 0;left: 0;z-index: -2;}
+.bg1{position: absolute;width: 100%;height: 100%;background: #92d1f1;z-index: -1;opacity: 0;}
+.p1_top{width: 36%;height: 18%;top: 23%;left: 32%;}
+.p1_left{width: 40%;height: 15%;top: 11%;}
+.p1_right{width: 40%;height: 16%;top: 32%;right: 0;}
+.p1_bottom{width: 60%;height: 35%;left: 20%;top: 46%;}
+#ctx{position: absolute;left: 50%;bottom: 60px;transform: translateX(-30px);-webkit-transform: translateX(-30px);}
+
+.p2{width: 45%;height: 74%;left: 40%;top: 11%;}
+.star{position: absolute;width: 25px;height: 25px;border-radius: 50%;background: white;box-shadow: 0 0 5px 5px rgba(255,255,255,0.6);}
+.star1{top: 7%;left: 30%;}
+.star2{top: 80%;left: 30%;}
+.star3{top: 80%;left: 50%;}
+.star4{top: 5%;left: 68%;}
+.star5{top: 62%;left: 68%;}
+.star6{top: 69%;left: 68%;}
+.star7{top: 74%;left: 68%;}
+.line1{position: absolute;top: 8%;left: 0;border-top: 2px solid white;width: 30%;transform-origin: left;-webkit-transform-origin: left;}
+.line2{position: absolute;top: 7%;left: 31%;border-left: 2px solid white;height: 73%;transform-origin: top;-webkit-transform-origin: top;}
+.line3{position: absolute;top: 81%;left: 30%;border-top: 2px solid white;width: 20%;transform-origin: left;-webkit-transform-origin: left;}
+.line4{position: absolute;top: 81%;left: 51%;border-left: 2px solid white;height: 20%;transform-origin: top;-webkit-transform-origin: top;}
+.line5{position: absolute;top: 75%;left: 100%;border-top: 2px solid white;width: 32%;transform: rotateZ(180deg);transform-origin: left;-webkit-transform: rotateZ(180deg);-webkit-transform-origin: left;}
+.line6{position: absolute;top: 74%;left: 69%;border-left: 2px solid white;height: 5%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+.line7{position: absolute;top: 63%;left: 100%;border-top: 2px solid white;width: 32%;transform: rotateZ(-180deg);transform-origin: left;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line8{position: absolute;top: 62%;left: 69%;border-left: 2px solid white;height: 57%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+
+.p3{width: 80%;height: 70%;left: 10%;top: 10%;box-shadow: 0 0 5px 5px lightgray;}
+.star31{top: 6%;left: 49%;}
+.line31{position: absolute;top: 0;left: 50%;border-left: 2px solid white;height: 6%;transform-origin: top;-webkit-transform-origin: top;}
+.p3_1{width: 100%;height: 85%;display: none;left: 0;top: 20px;}
+
+
+.p4{width: 40%;height: 70%;left: 30%;top: 10%;}
+.star41{top: 90%;left: 38%;}
+.star42{top: 81%;left: 38%;}
+.star43{top: 81%;left: 57%;}
+.star44{top: 73%;left: 57%;}
+.star45{top: 73%;left: 73%;}
+.star46{top: 68%;left: 73%;}
+.star47{top: 61%;left: 73%;}
+.star48{top: 5%;left: 73%;}
+.line41{position: absolute;top: 91%;left: 0;border-top: 2px solid white;width: 38%;transform-origin: left;-webkit-transform-origin: left;}
+.line42{position: absolute;top: 91%;left: 39%;border-left: 2px solid white;height: 9%;transform: rotateZ(-180deg);-webkit-transform: rotateZ(-180deg);transform-origin: top;-webkit-transform-origin: top;}
+.line43{position: absolute;top: 82%;left: 39%;border-top: 2px solid white;width: 19%;transform-origin: left;-webkit-transform-origin: left;}
+.line44{position: absolute;top: 100%;left: 58%;border-left: 2px solid white;height: 27%;transform: rotateZ(-180deg);-webkit-transform: rotateZ(-180deg);transform-origin: top;-webkit-transform-origin: top;}
+.line46{position: absolute;top: 74%;left: 58%;border-top: 2px solid white;width: 16%;transform-origin: left;-webkit-transform-origin: left;}
+.line47{position: absolute;top: 74%;left: 74%;border-left: 2px solid white;height: 5%;transform: rotateZ(-180deg);-webkit-transform: rotateZ(-180deg);transform-origin: top;-webkit-transform-origin: top;}
+.line48{position: absolute;top: 6%;left: 100%;border-top: 2px solid white;width: 27%;transform: rotateZ(-180deg);transform-origin: left;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line49{position: absolute;top: 6%;left: 74%;border-left: 2px solid white;height: 56%;transform-origin: top;-webkit-transform-origin: top;}
+
+.p5{width: 80%;height: 70%;left: 10%;top: 10%;box-shadow: 0 0 5px 5px lightgray;}
+.p5_1{width: 100%;height: 85%;display: none;left: 0;top: 20px;}
+.star51{top: 6%;left: 49%;}
+.line51{position: absolute;top: 0;left: 50%;border-left: 2px solid white;height: 6%;transform-origin: top;-webkit-transform-origin: top;}
+
+.p6{width: 55%;height: 65%;left: 34%;top: 12%;}
+.star61{top: 19%;left: 34%;}
+.star62{top: 69%;left: 34%;}
+.star63{top: 78%;left: 29%;}
+.star64{top: 78%;left: 66%;}
+.star65{top: 73%;left: 66%;}
+.star66{top: 60%;left: 66%;}
+.star67{top: 6%;left: 66%;}
+.line61{position: absolute;top: 20%;left: 0;border-top: 2px solid white;width: 34%;transform-origin: left;-webkit-transform-origin: left;}
+.line62{position: absolute;top: 20%;left: 35%;border-left: 2px solid white;height: 50%;transform-origin: top;-webkit-transform-origin: top;}
+.line63{position: absolute;top: 100%;left: 30%;border-left: 2px solid white;height: 22%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+.line64{position: absolute;top: 79%;left: 30%;border-top: 2px solid white;width: 37%;transform-origin: left;-webkit-transform-origin: left;}
+.line65{position: absolute;top: 79%;left: 67%;border-left: 2px solid white;height: 5%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+.line66{position: absolute;top: 7%;left: 100%;border-top: 2px solid white;width: 34%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line67{position: absolute;top: 7%;left: 67%;border-left: 2px solid white;height: 54%;transform-origin: top;-webkit-transform-origin: top;}
+
+.p7{width: 80%;height: 64%;left: 10%;top: 10%;}
+.p7_left1{width: 4%;height: 3%;left: 2%;bottom: 76%;}
+.p7_left2{position: absolute;top: 100%;left: 4%;border-left: 2px solid white;height: 77%;transform: rotateZ(-180deg);transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+
+.p8{width: 28%;height: 74%;left: 36%;top: 11%;}
+.star81{left: 31%;top: 18%;}
+.star82{left: 31%;top: 57%;}
+.star83{left: 31%;top: 76%;}
+.star84{left: 62%;top: 76%;}
+.star85{left: 62%;top: 70%;}
+.star86{left: 62%;top: 59%;}
+.star87{left: 62%;top: 5%;}
+.line81{position: absolute;top: 19%;left: 0;border-top: 2px solid white;width: 31%;transform-origin: left;-webkit-transform-origin: left;}
+.line82{position: absolute;top: 19%;left: 32%;border-left: 2px solid white;height: 39%;transform-origin: top;-webkit-transform-origin: top;}
+.line83{position: absolute;top: 71%;left: 100%;border-top: 2px solid white;width: 38%;transform: rotateZ(-180deg);transform-origin: left;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line84{position: absolute;top: 71%;left: 63%;border-left: 2px solid white;height: 6%;transform-origin: top;-webkit-transform-origin: top;}
+.line85{position: absolute;top: 77%;left: 63%;border-top: 2px solid white;width: 31%;transform: rotateZ(-180deg);transform-origin: left;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line86{position: absolute;top: 77%;left: 32%;border-left: 2px solid white;height: 34%;transform-origin: top;-webkit-transform-origin: top;}
+.line87{position: absolute;top: 60%;left: 100%;border-top: 2px solid white;width: 38%;transform: rotateZ(-180deg);transform-origin: left;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: left;}
+.line88{position: absolute;left: 63%;top: 60%;border-left: 2px solid white;height: 54%;transform-origin: top;-webkit-transform: rotateZ(-180deg);-webkit-transform-origin: top;}
+
+.p91,.p92,.p93{width: 100%;height: 100%;}
+.p9_top{position: absolute;width: 70%;height: 30%;top: 8%;left: 15%;z-index: 10%;}
+
+
+
+
+
+
+
+
